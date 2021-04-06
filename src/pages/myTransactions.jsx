@@ -1,18 +1,68 @@
-import React from 'react'
- 
+import React, { useState } from "react";
+import HeaderCommon from "../components/header/commonHeader";
 
-const myTransactions = () => {
-    return (
-<div>
+const MyTransactions = () => {
+  //MOCK DATA FOR TABLE
+  const [transactions, setTransactions] = useState([
+    {
+      type: "Perk",
+      name: "Uber",
+      details: "VOUCHER",
+      transactionDetails: "150",
+      status: true,
+      time: "time",
+    },
+    {
+      type: "Topup",
+      details: "For Month of March",
+      transactionDetails: 3000,
+      status: true,
+      time: "time",
+    },
+    {
+      type: "Topup",
+      details: "For Month of March",
+      transactionDetails: 3000,
+      status: false,
+      time: "time",
+    },
+    {
+      type: "Perk",
+      name: "Amazon",
+      details: "VOUCHER",
+      transactionDetails: "500",
+      status: true,
+      time: "time",
+      perkImg:
+        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60",
+    },
+    {
+      type: "Perk",
+      name: "Amazon",
+      details: "VOUCHER",
+      transactionDetails: "500",
+      status: false,
+      time: "time",
+      perkImg:
+        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60",
+    },
+  ]);
+
+  return (
+    <div>
+      <HeaderCommon />
       <section class="text-gray-600 body-font">
         <div class="container px-2 pt-12 pb-2 mx-auto">
           <div class=" flex flex-col sm:flex-row sm:items-center items-start mx-auto">
             <h1 class="flex-grow sm:pr-16 text-5xl font-medium title-font text-gray-900">
               My Transactions
             </h1>
-            <button class="flex-shrink-0 text-black bg-white border-gray-500 border-4 py-2 px-8 rounded text-lg mt-10 sm:mt-0">
-              Back to Dashboard
-            </button>
+
+            <a href="/">
+              <button class="flex-shrink-0 text-black bg-white border-gray-500 border-4 py-2 px-8 rounded text-lg mt-10 sm:mt-0">
+                Back to Dashboard
+              </button>
+            </a>
           </div>
           <div class="h-1 bg-gray-500 rounded m-1"></div>
 
@@ -51,7 +101,7 @@ const myTransactions = () => {
                           scope="col"
                           class="px-6 py-4 font-extrabold text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
                         >
-                          Perk Name
+                          Perk Name/Credit
                         </th>
                         <th
                           scope="col"
@@ -75,131 +125,73 @@ const myTransactions = () => {
                     </thead>
 
                     <tbody class="bg-white divide-y divide-gray-200">
-                      <tr>
-                        <td class="px-6 py-5 whitespace-nowrap">
-                          <div class="flex items-center">
-                            <div class="flex-shrink-0 h-10 w-10">
-                              <img
-                                class="h-10 w-10 rounded-full"
-                                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60"
-                                alt=""
-                              />
-                            </div>
-                            <div class="ml-4">
-                              <div class="text-sm font-medium text-gray-900">
-                                Perk X
-                              </div>
-                              <div class="text-sm text-gray-500">
-                                Details
-                              </div>
-                            </div>
-                          </div>
-                        </td>
-                        <td class="px-6 py-5 whitespace-nowrap">
-                          <div class="text-sm text-gray-900">
-                            Transaction Details
-                          </div>
-                          <div class="text-sm text-gray-500">Optimization</div>
-                        </td>
-                        <td class="px-6 py-5 whitespace-nowrap">
-                          <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
-                            Claimed
-                          </span>
-                        </td>
-                        <td class="px-6 py-5 whitespace-nowrap text-sm text-gray-500">
-                          Time
-                        </td>
-                        <td class="px-6 py-5 whitespace-nowrap text-right text-sm font-medium">
-                        </td>
-                      </tr>
+                      {transactions.map((transaction) => {
+                        return (
+                          <tr>
+                            <td class="px-6 py-5 whitespace-nowrap">
+                              <div class="flex items-center">
+                                <div class="flex-shrink-0 h-10 w-10">
+                                  <img
+                                    class="h-10 w-10 rounded-full"
+                                    src={
+                                      transaction.type === "Perk"
+                                        ? transaction.perkImg
+                                          ? transaction.perkImg
+                                          : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEKWsrQjrLklNeCqRe4FXVCTLKzyQaXWqwWUDyFvq8e1YXaPFu-thyqOzkiwXLshME9H0&usqp=CAU"
+                                        : "https://png.pngtree.com/png-vector/20190728/ourlarge/pngtree-note-notebook-cards-credit--blue-dotted-line-line-icon-png-image_1618206.jpg"
+                                    }
+                                    alt=""
+                                  />
+                                </div>
 
-                      <tr>
-                        <td class="px-6 py-5 whitespace-nowrap">
-                          <div class="flex items-center">
-                            <div class="flex-shrink-0 h-10 w-10">
-                              <img
-                                class="h-10 w-10 rounded-full"
-                                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60"
-                                alt=""
-                              />
-                            </div>
-                            <div class="ml-4">
-                              <div class="text-sm font-medium text-gray-900">
-                                Jane Cooper
-                              </div>
-                              <div class="text-sm text-gray-500">
-                                jane.cooper@example.com
-                              </div>
-                            </div>
-                          </div>
-                        </td>
-                        <td class="px-6 py-5 whitespace-nowrap">
-                          <div class="text-sm text-gray-900">
-                            Regional Paradigm Technician
-                          </div>
-                          <div class="text-sm text-gray-500">Optimization</div>
-                        </td>
-                        <td class="px-6 py-5 whitespace-nowrap">
-                          <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
-                            Active
-                          </span>
-                        </td>
-                        <td class="px-6 py-5 whitespace-nowrap text-sm text-gray-500">
-                          Admin
-                        </td>
-                        <td class="px-6 py-5 whitespace-nowrap text-right text-sm font-medium">
-                          <a
-                            href="/"
-                            class="text-indigo-600 hover:text-indigo-900"
-                          >
-                            Edit
-                          </a>
-                        </td>
-                      </tr>
+                                <div class="ml-4">
+                                  <div class="text-sm font-medium text-gray-900">
+                                    {transaction.type === "Perk"
+                                      ? transaction.name
+                                      : "CREDIT FROM ADMIN"}
+                                  </div>
 
-                      <tr>
-                        <td class="px-6 py-5 whitespace-nowrap">
-                          <div class="flex items-center">
-                            <div class="flex-shrink-0 h-10 w-10">
-                              <img
-                                class="h-10 w-10 rounded-full"
-                                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60"
-                                alt=""
-                              />
-                            </div>
-                            <div class="ml-4">
-                              <div class="text-sm font-medium text-gray-900">
-                                Jane Cooper
+                                  <div class="text-sm text-gray-500">
+                                    {transaction.details}
+                                  </div>
+                                </div>
                               </div>
+                            </td>
+
+                            <td class="px-6 py-5 whitespace-nowrap">
+                              <div class="text-sm text-gray-900">
+                                {transaction.transactionDetails}
+                              </div>
+
                               <div class="text-sm text-gray-500">
-                                jane.cooper@example.com
+                                {transaction.status
+                                  ? transaction.type === "Perk"
+                                    ? "Steps Sent on Mail"
+                                    : "Added To Perkeasy Account"
+                                  : ""}
                               </div>
-                            </div>
-                          </div>
-                        </td>
-                        <td class="px-6 py-5 whitespace-nowrap">
-                          <div class="text-sm text-gray-900">
-                            Regional Paradigm Technician
-                          </div>
-                          <div class="text-sm text-gray-500">Optimization</div>
-                        </td>
-                        <td class="px-6 py-5 whitespace-nowrap">
-                          <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
-                            Active
-                          </span>
-                        </td>
-                        <td class="px-6 py-5 whitespace-nowrap text-sm text-gray-500">
-                          Admin
-                        </td>
-                        <td class="px-6 py-5 whitespace-nowrap text-right text-sm font-medium">
-                          <a
-                            href="/"
-                            class="text-indigo-600 hover:text-indigo-900"
-                          >
-                            Edit
-                          </a>
-                        </td>
-                      </tr>
+                            </td>
+
+                            <td class="px-6 py-5 whitespace-nowrap">
+                              {transaction.status ? (
+                                <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                                  {transaction.type === "Perk"
+                                    ? "Active"
+                                    : "Success"}
+                                </span>
+                              ) : (
+                                <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-red-800">
+                                  Failed
+                                </span>
+                              )}
+                            </td>
+
+                            <td class="px-6 py-5 whitespace-nowrap text-sm text-gray-500">
+                              {transaction.time}
+                            </td>
+                          </tr>
+                        );
+                      })}
                     </tbody>
                   </table>
                 </div>
@@ -209,7 +201,7 @@ const myTransactions = () => {
         </div>
       </section>
     </div>
-    );
-}
+  );
+};
 
-export default myTransactions;
+export default MyTransactions;
