@@ -1,8 +1,53 @@
-import React from "react";
+import React, { useState } from "react";
+import HeaderCommon from "../components/header/commonHeader";
 
 const EmpManagement = () => {
+  const [employees, setEmployees] = useState([
+    {
+      name: "Jane Cooper",
+      email: "jane.cooper@example.com",
+      title: "Regional Paradigm Technician",
+      subTitle: "Optimization",
+      status: true,
+      role: "Admin",
+      profileImage:
+        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60",
+    },
+    {
+      name: "Jane Cooper",
+      email: "jane.cooper@example.com",
+      title: "Regional Paradigm Technician",
+      subTitle: "Optimization",
+      status: true,
+      role: "Admin",
+      profileImage:
+        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60",
+    },
+    {
+      name: "John Cooper",
+      email: "john.cooper@example.com",
+      title: "Paradigm Technician",
+      subTitle: "Standard",
+      status: false,
+      role: "HR",
+      profileImage:
+        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60",
+    },
+    {
+      name: "Jane Cooper",
+      email: "jane.cooper@example.com",
+      title: "Regional Paradigm Technician",
+      subTitle: "Optimization",
+      status: true,
+      role: "Admin",
+      profileImage:
+        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60",
+    },
+  ]);
+
   return (
     <div>
+      <HeaderCommon />
       <section class="text-gray-600 body-font">
         <div class="container px-2 pt-12 pb-2 mx-auto">
           <div class=" flex flex-col sm:flex-row sm:items-center items-start mx-auto">
@@ -83,137 +128,72 @@ const EmpManagement = () => {
                     </thead>
 
                     <tbody class="bg-white divide-y divide-gray-200">
-                      <tr>
-                        <td class="px-6 py-5 whitespace-nowrap">
-                          <div class="flex items-center">
-                            <div class="flex-shrink-0 h-10 w-10">
-                              <img
-                                class="h-10 w-10 rounded-full"
-                                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60"
-                                alt=""
-                              />
-                            </div>
-                            <div class="ml-4">
-                              <div class="text-sm font-medium text-gray-900">
-                                Jane Cooper
+                      {/* Rendering all Employees */}
+                      {employees.map((employee, index) => {
+                        return (
+                          <tr>
+                            <td class="px-6 py-5 whitespace-nowrap">
+                              <div class="flex items-center">
+                                <div class="flex-shrink-0 h-10 w-10">
+                                  <img
+                                    class="h-10 w-10 rounded-full"
+                                    src={employee.profileImage}
+                                    alt=""
+                                  />
+                                </div>
+                                <div class="ml-4">
+                                  <div class="text-sm font-medium text-gray-900">
+                                    {employee.name}
+                                  </div>
+                                  <div class="text-sm text-gray-500">
+                                    {employee.email}
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td class="px-6 py-5 whitespace-nowrap">
+                              <div class="text-sm text-gray-900">
+                                {employee.title}
                               </div>
                               <div class="text-sm text-gray-500">
-                                jane.cooper@example.com
+                                {employee.subTitle}
                               </div>
-                            </div>
-                          </div>
-                        </td>
-                        <td class="px-6 py-5 whitespace-nowrap">
-                          <div class="text-sm text-gray-900">
-                            Regional Paradigm Technician
-                          </div>
-                          <div class="text-sm text-gray-500">Optimization</div>
-                        </td>
-                        <td class="px-6 py-5 whitespace-nowrap">
-                          <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
-                            Active
-                          </span>
-                        </td>
-                        <td class="px-6 py-5 whitespace-nowrap text-sm text-gray-500">
-                          Admin
-                        </td>
-                        <td class="px-6 py-5 whitespace-nowrap text-right text-sm font-medium">
-                          <a
-                            href="/"
-                            class="text-indigo-600 hover:text-indigo-900"
-                          >
-                            Edit
-                          </a>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td class="px-6 py-5 whitespace-nowrap">
-                          <div class="flex items-center">
-                            <div class="flex-shrink-0 h-10 w-10">
-                              <img
-                                class="h-10 w-10 rounded-full"
-                                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60"
-                                alt=""
-                              />
-                            </div>
-                            <div class="ml-4">
-                              <div class="text-sm font-medium text-gray-900">
-                                Jane Cooper
-                              </div>
-                              <div class="text-sm text-gray-500">
-                                jane.cooper@example.com
-                              </div>
-                            </div>
-                          </div>
-                        </td>
-                        <td class="px-6 py-5 whitespace-nowrap">
-                          <div class="text-sm text-gray-900">
-                            Regional Paradigm Technician
-                          </div>
-                          <div class="text-sm text-gray-500">Optimization</div>
-                        </td>
-                        <td class="px-6 py-5 whitespace-nowrap">
-                          <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
-                            Active
-                          </span>
-                        </td>
-                        <td class="px-6 py-5 whitespace-nowrap text-sm text-gray-500">
-                          Admin
-                        </td>
-                        <td class="px-6 py-5 whitespace-nowrap text-right text-sm font-medium">
-                          <a
-                            href="/"
-                            class="text-indigo-600 hover:text-indigo-900"
-                          >
-                            Edit
-                          </a>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td class="px-6 py-5 whitespace-nowrap">
-                          <div class="flex items-center">
-                            <div class="flex-shrink-0 h-10 w-10">
-                              <img
-                                class="h-10 w-10 rounded-full"
-                                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60"
-                                alt=""
-                              />
-                            </div>
-                            <div class="ml-4">
-                              <div class="text-sm font-medium text-gray-900">
-                                Jane Cooper
-                              </div>
-                              <div class="text-sm text-gray-500">
-                                jane.cooper@example.com
-                              </div>
-                            </div>
-                          </div>
-                        </td>
-                        <td class="px-6 py-5 whitespace-nowrap">
-                          <div class="text-sm text-gray-900">
-                            Regional Paradigm Technician
-                          </div>
-                          <div class="text-sm text-gray-500">Optimization</div>
-                        </td>
-                        <td class="px-6 py-5 whitespace-nowrap">
-                          <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
-                            Active
-                          </span>
-                        </td>
-                        <td class="px-6 py-5 whitespace-nowrap text-sm text-gray-500">
-                          Admin
-                        </td>
-                        <td class="px-6 py-5 whitespace-nowrap text-right text-sm font-medium">
-                          <a
-                            href="/"
-                            class="text-indigo-600 hover:text-indigo-900"
-                          >
-                            Edit
-                          </a>
-                        </td>
-                      </tr>
+                            </td>
+                            <td class="px-6 py-5 whitespace-nowrap">
+                              {employee.status ? (
+                                <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                                  Active
+                                </span>
+                              ) : (
+                                <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-red-800">
+                                  Blocked
+                                </span>
+                              )}
+                            </td>
+                            <td class="px-6 py-5 whitespace-nowrap text-sm text-gray-500">
+                              {employee.role}
+                            </td>
+                            <td class="px-6 py-5 whitespace-nowrap text-right text-sm font-medium">
+                              {employee.status ? (
+                                <a
+                                  href="/"
+                                  class="text-indigo-600 hover:text-indigo-900"
+                                >
+                                  Edit
+                                </a>
+                              ) : (
+                                <a
+                                  href="/"
+                                  class="text-red-600 hover:text-green-400"
+                                >
+                                  Unblock
+                                </a>
+                              )}
+                            </td>
+                          </tr>
+                        );
+                      })}
+                      {/* END FOR LOOP */}
                     </tbody>
                   </table>
                 </div>
