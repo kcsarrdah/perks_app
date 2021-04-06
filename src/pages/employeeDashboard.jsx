@@ -2,7 +2,13 @@ import React from 'react'
 
 const EmployeeProfile = () => {
     return(
-      <h1>Coming Soon...</h1>
+      <div>
+        Coming Soon...
+
+        <a href="/myPerks"><button>Claimed Perks</button></a>
+
+
+      </div>
     );}
 
 export default EmployeeProfile;
