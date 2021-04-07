@@ -7,6 +7,7 @@ function MyPerks(props) {
     const [perks, setPerks] = useState([
         { date: "date", perkName: "perk1", descriptionLine1: "descriptionlinea", descriptionLine2: "descriptionline", descriptionLine3: "descriptionline", tncUrl: "#" },
         { date: "date", perkName: "perk2", descriptionLine1: "descriptionlineb", descriptionLine2: "descriptionline", descriptionLine3: "descriptionline", tncUrl: "#" },
+        { date: "date", perkName: "perk2", descriptionLine1: "descriptionlineb", descriptionLine2: "descriptionline", descriptionLine3: "descriptionline", tncUrl: "#" },
         { date: "date", perkName: "perk3", descriptionLine1: "descriptionlinec", descriptionLine2: "descriptionline", descriptionLine3: "descriptionline", tncUrl: "#" },
         { date: "date", perkName: "perk4", descriptionLine1: "descriptionlined", descriptionLine2: "descriptionline", descriptionLine3: "descriptionline", tncUrl: "#" }])
     return (
