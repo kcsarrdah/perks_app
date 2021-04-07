@@ -6,11 +6,25 @@ const EmployeeProfile = () => {
     //Main div
     <div>
 
+      {/* header */}
+      <div class=" flex flex-col sm:flex-row p-4 sm:items-center items-start mx-auto">
+        <h1 class="flex-grow sm:pr-16 text-5xl font-medium title-font text-gray-900">
+          Perks Shop
+            </h1>
+
+        <a href="/">
+          <button class="flex-shrink-0 text-black bg-white border-gray-500 border-4 py-2 px-8 rounded text-lg mt-10 sm:mt-0">
+            Log out
+              </button>
+        </a>
+      </div><div class="h-1 bg-gray-500 rounded m-1"></div>
+
+
       {/* below header */}
-      <div id="below header" className="container flex p-8">
+      <div id="below header" className="container flex flex-col sm:flex-row p-4 sm:items-center items-start mx-auto">
 
         {/* profile */}
-        <div class="max-w-md h-auto w-auto p-8 sm:flex sm:space-x-6 bg-gray-200 text-gray-800">
+        <div class="max-w-md h-auto w-auto p-6 sm:flex sm:space-x-6 bg-gray-200 text-gray-800">
           <div class="flex-shrink-0 w-full mb-6 h-44 sm:h-32 sm:w-32 sm:mb-0">
             <img src="https://source.unsplash.com/100x100/?portrait" alt="" class="object-cover object-center w-full h-full rounded" />
           </div>
@@ -35,90 +49,96 @@ const EmployeeProfile = () => {
             </div>
           </div>
         </div>
+
         {/* points card */}
-        <div class="card bg-gray-300 py-8">
+        <div class="card mx-8 px-8 text-center bg-gray-300 py-8">
           <div class="card-header h-1/2 w-auto">
-            <div class="font-semibold text-gray-900">Point balance</div>
+            <div class="font-semibold text-gray-90 p-2">Point balance</div>
           </div>
-          <div class="card-body">Balance</div>
+          <div class="flex items-center justify-center p-3 space-x-3 border-t-2">Balance</div>
         </div>
 
 
-
-        <div class="list py-4">
-          <a href="/myPerks" class="list-item">My Perks</a>
-          <a href="/myTransaction" class="list-item">Purchase History</a>
+        <div class="list card ml-auto justify-self-end px-8 float-right text-start py-8">
+          <a href="/myPerks"><button class="btn px-10 mb-4 btn-outline-secondary">My Perks</button></a>
+          <a href="/myTransaction" class=""><button class="btn btn-outline-secondary">Purchase History</button></a>
         </div>
 
 
       </div>
 
-      <section class="py-6 bg-gray-100 text-gray-800">
-        <a href="#">
-          <div class="flex flex-col items-start p-4 mx-auto sm:p-10">
-            <div class="flex flex-row flex-wrap mt-8">
-              <div class="flex flex-col justify-center w-full px-8 mx-6 my-12 text-center rounded-md md:w-96 lg:w-80 xl:w-64 bg-gray-800 text-gray-100">
-                <img alt="" class="self-center w-24 h-24 -mt-12 bg-center bg-cover rounded-full" src="https://source.unsplash.com/100x100/?portrait" />
-                <div class="flex-1 my-4">
-                  <p class="text-xl font-semibold leading-snug">Perk Name</p>
-                  <p>Description</p>
-                </div>
-                <div class="flex items-center justify-end p-3 space-x-3 border-t-2">
-                  <p>Points</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </a>
-        <a href="#">
-          <div class="flex flex-col items-start p-4 mx-auto sm:p-10">
-            <div class="flex flex-row flex-wrap mt-8">
-              <div class="flex flex-col justify-center w-full px-8 mx-6 my-12 text-center rounded-md md:w-96 lg:w-80 xl:w-64 bg-gray-800 text-gray-100">
-                <img alt="" class="self-center w-24 h-24 -mt-12 bg-center bg-cover rounded-full" src="https://source.unsplash.com/100x100/?portrait" />
-                <div class="flex-1 my-4">
-                  <p class="text-xl font-semibold leading-snug">Perk Name</p>
-                  <p>Description</p>
-                </div>
-                <div class="flex items-center justify-end p-3 space-x-3 border-t-2">
-                  <p>Points</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </a>
-        <a href="#">
-          <div class="flex flex-col items-start p-4 mx-auto sm:p-10">
-            <div class="flex flex-row flex-wrap mt-8">
-              <div class="flex flex-col justify-center w-full px-8 mx-6 my-12 text-center rounded-md md:w-96 lg:w-80 xl:w-64 bg-gray-800 text-gray-100">
-                <img alt="" class="self-center w-24 h-24 -mt-12 bg-center bg-cover rounded-full" src="https://source.unsplash.com/100x100/?portrait" />
-                <div class="flex-1 my-4">
-                  <p class="text-xl font-semibold leading-snug">Perk Name</p>
-                  <p>Description</p>
-                </div>
-                <div class="flex items-center justify-end p-3 space-x-3 border-t-2">
-                  <p>Points</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </a>
-        <a href="#">
-          <div class="flex flex-col items-start p-4 mx-auto sm:p-10">
-            <div class="flex flex-row flex-wrap mt-8">
-              <div class="flex flex-col justify-center w-full px-8 mx-6 my-12 text-center rounded-md md:w-96 lg:w-80 xl:w-64 bg-gray-800 text-gray-100">
-                <img alt="" class="self-center w-24 h-24 -mt-12 bg-center bg-cover rounded-full" src="https://source.unsplash.com/100x100/?portrait" />
-                <div class="flex-1 my-4">
-                  <p class="text-xl font-semibold leading-snug">Perk Name</p>
-                  <p>Description</p>
-                </div>
-                <div class="flex items-center justify-end p-3 space-x-3 border-t-2">
-                  <p>Points</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </a>
 
+
+      <section class="py-4 bg-gray-100 text-gray-800">
+        <div class="container flex flex-col items-start justify-center p-4 mx-auto sm:p-10">
+          <div class="flex flex-row flex-wrap justify-start mt-4">
+
+
+            <a id="card" href="">
+              <div class="flex flex-col justify-center w-full px-8 mx-6 my-12 text-center rounded-md md:w-96 lg:w-80 xl:w-64 bg-gray-800 text-gray-100">
+                <img alt="" class="self-center w-24 h-24 -mt-12 bg-center bg-cover rounded-full" src="https://source.unsplash.com/100x100/?portrait" />
+                <div class="flex-1 my-4">
+                  <p class="text-xl font-semibold leading-snug">Perk name</p>
+                  <p>Description</p>
+                </div>
+                <div class="flex items-center justify-end p-3 space-x-3 border-t-2">
+                  <p>Points</p>
+                </div>
+              </div>
+            </a>
+            <a id="card" href="">
+              <div class="flex flex-col justify-center w-full px-8 mx-6 my-12 text-center rounded-md md:w-96 lg:w-80 xl:w-64 bg-gray-800 text-gray-100">
+                <img alt="" class="self-center w-24 h-24 -mt-12 bg-center bg-cover rounded-full" src="https://source.unsplash.com/100x100/?portrait" />
+                <div class="flex-1 my-4">
+                  <p class="text-xl font-semibold leading-snug">Perk name</p>
+                  <p>Description</p>
+                </div>
+                <div class="flex items-center justify-end p-3 space-x-3 border-t-2">
+                  <p>Points</p>
+                </div>
+              </div>
+            </a>
+            <a id="card" href="">
+              <div class="flex flex-col justify-center w-full px-8 mx-6 my-12 text-center rounded-md md:w-96 lg:w-80 xl:w-64 bg-gray-800 text-gray-100">
+                <img alt="" class="self-center w-24 h-24 -mt-12 bg-center bg-cover rounded-full" src="https://source.unsplash.com/100x100/?portrait" />
+                <div class="flex-1 my-4">
+                  <p class="text-xl font-semibold leading-snug">Perk name</p>
+                  <p>Description</p>
+                </div>
+                <div class="flex items-center justify-end p-3 space-x-3 border-t-2">
+                  <p>Points</p>
+                </div>
+              </div>
+            </a>
+            <a id="card" href="">
+              <div class="flex flex-col justify-center w-full px-8 mx-6 my-12 text-center rounded-md md:w-96 lg:w-80 xl:w-64 bg-gray-800 text-gray-100">
+                <img alt="" class="self-center w-24 h-24 -mt-12 bg-center bg-cover rounded-full" src="https://source.unsplash.com/100x100/?portrait" />
+                <div class="flex-1 my-4">
+                  <p class="text-xl font-semibold leading-snug">Perk name</p>
+                  <p>Description</p>
+                </div>
+                <div class="flex items-center justify-end p-3 space-x-3 border-t-2">
+                  <p>Points</p>
+                </div>
+              </div>
+            </a>
+            <a id="card" href="">
+              <div class="flex flex-col justify-center w-full px-8 mx-6 my-12 text-center rounded-md md:w-96 lg:w-80 xl:w-64 bg-gray-800 text-gray-100">
+                <img alt="" class="self-center w-24 h-24 -mt-12 bg-center bg-cover rounded-full" src="https://source.unsplash.com/100x100/?portrait" />
+                <div class="flex-1 my-4">
+                  <p class="text-xl font-semibold leading-snug">Perk name</p>
+                  <p>Description</p>
+                </div>
+                <div class="flex items-center justify-end p-3 space-x-3 border-t-2">
+                  <p>Points</p>
+                </div>
+              </div>
+            </a>
+
+
+
+          </div>
+        </div>
       </section>
 
     </div>
