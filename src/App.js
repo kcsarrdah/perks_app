@@ -37,7 +37,9 @@ function App() {
           <EmployeeDashboard />
         </Route>
 
-        <Route path="/" exact></Route>
+        <Route path="/" exact>
+          
+        </Route>
 
         <Route path="/" exact></Route>
 

@@ -58,7 +58,7 @@ const MyTransactions = () => {
               My Transactions
             </h1>
 
-            <a href="/">
+            <a href="/empDashboard">
               <button class="flex-shrink-0 text-black bg-white border-gray-500 border-4 py-2 px-8 rounded text-lg mt-10 sm:mt-0">
                 Back to Dashboard
               </button>

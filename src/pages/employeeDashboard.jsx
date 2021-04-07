@@ -46,8 +46,8 @@ const EmployeeProfile = () => {
 
 
         <div class="list py-4">
-          <a href="#" class="list-item">My Perks</a>
-          <a href="#" class="list-item">Purchase History</a>
+          <a href="/myPerks" class="list-item">My Perks</a>
+          <a href="/myTransaction" class="list-item">Purchase History</a>
         </div>
 
 
@@ -121,7 +121,6 @@ const EmployeeProfile = () => {
 
       </section>
 
-      <a href="/myPerks"><button>Claimed Perks</button></a>
     </div>
   );
 }
