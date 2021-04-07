@@ -1,8 +1,29 @@
-import React, { useState } from "react";
+import axios from "axios";
+import React, { useState, useEffect } from "react";
 import HeaderCommon from "../components/header/commonHeader";
 
 const MyTransactions = () => {
   //MOCK DATA FOR TABLE
+  let myTransactions = [];
+
+  useEffect(() => {
+    const options = {
+      headers: {
+        "x-clerkid": "Krishnna1234",
+        // "Access-Control-Allow-Origin": "*",
+      },
+    };
+
+    axios
+      .get("http://d020c4523003.ngrok.io/employee/perks/test", options)
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+
   const [transactions, setTransactions] = useState([
     {
       type: "Perk",
