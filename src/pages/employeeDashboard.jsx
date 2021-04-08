@@ -72,6 +72,24 @@ const EmployeeProfile = () => {
       <div id="search bar and filters tab" className="flex flex-col sm:flex-row p-4 sm:items-center items-start mx-auto">
 
 
+        <div x-data="dropdown()">
+          <button className="btn btn-secondary p-4" id="open-color-menu-divider" x-spread="trigger">
+            Categories
+          </button>
+          <div class="dropdown-list" id="color-menu-divider" x-spread="dropdown" x-cloak>
+          <p class="dropdown-header">Category 1</p>
+            <a href="#" class="dropdown-item">Option</a>
+            <div class="dropdown-divide"></div>
+            <p class="dropdown-header">Category 2</p>
+            <a href="#" class="dropdown-item">Option</a>
+            <a href="#" class="dropdown-item">Option</a>
+            <div class="dropdown-divide"></div>
+            <p class="dropdown-header">Category 3</p>
+            <a href="#" class="dropdown-item">Option</a>
+          </div>
+        </div>
+
+
         {/* search bar */}
         <input
           type="text"
