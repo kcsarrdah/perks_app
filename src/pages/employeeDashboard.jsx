@@ -21,7 +21,7 @@ const EmployeeProfile = () => {
 
 
       {/* below header */}
-      <div id="below header" className="container flex flex-col sm:flex-row p-4 sm:items-center items-start mx-auto">
+      <div id="below header" className=" flex flex-col sm:flex-row p-4 sm:items-center items-start mx-auto">
 
         {/* profile */}
         <div class="max-w-md h-auto w-auto p-6 sm:flex sm:space-x-6 bg-gray-200 text-gray-800">
@@ -58,8 +58,8 @@ const EmployeeProfile = () => {
           <div class="flex items-center justify-center p-3 space-x-3 border-t-2">Balance</div>
         </div>
 
-
-        <div class="list card ml-auto justify-self-end px-8 float-right text-start py-8">
+        {/* option buttons */}
+        <div class="list card ml-auto justify-self-end px-12 float-right text-start py-8">
           <a href="/myPerks"><button class="btn px-10 mb-4 btn-outline-secondary">My Perks</button></a>
           <a href="/myTransaction" class=""><button class="btn btn-outline-secondary">Purchase History</button></a>
         </div>
@@ -68,6 +68,18 @@ const EmployeeProfile = () => {
       </div>
 
 
+      {/* above perks display */}
+      <div id="search bar and filters tab" className="flex flex-col sm:flex-row p-4 sm:items-center items-start mx-auto">
+
+
+        {/* search bar */}
+        <input
+          type="text"
+          class="ml-auto justify-self-end py-3 m-8 w-1/3 pl-8 text-gray-700 bg-white border border-gray-600 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring"
+          placeholder="Search Perks"
+        />
+
+      </div>
 
       <section class="py-4 bg-gray-100 text-gray-800">
         <div class="container flex flex-col items-start justify-center p-4 mx-auto sm:p-10">
