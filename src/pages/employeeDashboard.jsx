@@ -19,9 +19,9 @@ const EmployeeProfile = () => {
         </a>
       </div><div class="h-1 bg-gray-500 rounded m-1"></div>
 
-
+<div className="container">
       {/* below header */}
-      <div id="below header" className=" flex flex-col sm:flex-row p-4 sm:items-center items-start mx-auto">
+      <div id="below header" className="flex flex-col sm:flex-row p-4 sm:items-center items-start mx-auto">
 
         {/* profile */}
         <div class="max-w-md h-auto w-auto p-6 sm:flex sm:space-x-6 bg-gray-200 text-gray-800">
@@ -77,7 +77,7 @@ const EmployeeProfile = () => {
             Categories
           </button>
           <div class="dropdown-list" id="color-menu-divider" x-spread="dropdown" x-cloak>
-          <p class="dropdown-header">Category 1</p>
+            <p class="dropdown-header">Category 1</p>
             <a href="#" class="dropdown-item">Option</a>
             <div class="dropdown-divide"></div>
             <p class="dropdown-header">Category 2</p>
@@ -93,14 +93,56 @@ const EmployeeProfile = () => {
         {/* search bar */}
         <input
           type="text"
-          class="ml-auto justify-self-end py-3 m-8 w-1/3 pl-8 text-gray-700 bg-white border border-gray-600 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring"
+          class="ml-auto justify-self-end py-3 m-4 w-1/3 pl-8 text-gray-700 bg-white border border-gray-600 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring"
           placeholder="Search Perks"
         />
 
       </div>
 
-      <section class="py-4 bg-gray-100 text-gray-800">
-        <div class="container flex flex-col items-start justify-center p-4 mx-auto sm:p-10">
+      <div class="h-1 bg-gray-500 rounded m-1"></div>
+
+      <section class="py-4 bg-white-100 text-gray-800">
+
+
+        {/* running Out fast column */}
+        {/* <section class="text-gray-600 body-font">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="flex flex-wrap -m-4">
+              <div class="p-4 lg:w-1/3">
+                <div class="h-full bg-gray-100 bg-opacity-75 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
+                  <h1 class="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3">Running Out Fast</h1>
+                  <p class="leading-relaxed mb-3">Everyone seems to have an eye on these</p>
+                  <a class="p-2 text-indigo-500 inline-flex items-center">Perk1
+                  <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M5 12h14"></path>
+                      <path d="M12 5l7 7-7 7"></path>
+                    </svg>
+                  </a>
+                  <br />
+                  <a class=" p-2 text-indigo-500 inline-flex items-center">Perk2
+                  <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M5 12h14"></path>
+                      <path d="M12 5l7 7-7 7"></path>
+                    </svg>
+                  </a>
+                  <br />
+                  <a class="p-2 text-indigo-500 inline-flex items-center">Perk3
+                  <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M5 12h14"></path>
+                      <path d="M12 5l7 7-7 7"></path>
+                    </svg>
+                  </a>
+                  <br />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section> */}
+
+
+
+
+        <div class="flex flex-col items-start justify-center p-4 mx-auto sm:p-10">
           <div class="flex flex-row flex-wrap justify-start mt-4">
 
 
@@ -171,6 +213,7 @@ const EmployeeProfile = () => {
         </div>
       </section>
 
+    </div>
     </div>
   );
 }
